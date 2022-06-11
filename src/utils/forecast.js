@@ -12,9 +12,10 @@ const forecast = (latitude, longitude, callback) => {
       const description = body.current.weather_descriptions[0];
       const temp = body.current.temperature;
       const feelsLike = body.current.feelslike;
+      const windSpeed = body.current.wind_speed;
       callback(
         error,
-        `${description}. It is currently ${temp} degrees celsius outside. It feels like ${feelsLike} degrees.`
+        `${description}. It is currently ${temp} degrees celsius outside. It feels like ${feelsLike} degrees. You may also be interested to know the wind speed is ${windSpeed} miles per hour.`
       );
     }
   });
